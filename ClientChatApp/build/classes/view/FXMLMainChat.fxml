@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?scenebuilder-stylesheet "@../css/mainchatroom.css"?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="850.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FXMLMainChatController">
+   <left>
+      <VBox prefHeight="700.0" prefWidth="303.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTabPane nodeOrientation="LEFT_TO_RIGHT" opacity="0.91" prefHeight="689.0" prefWidth="303.0" side="LEFT" stylesheets="@../css/mainchatroom.css">
+               <tabs>
+                  <Tab text="Frinds">
+                     <content>
+                        <JFXListView prefHeight="610.0" prefWidth="268.0" />
+                     </content>
+                  </Tab>
+                  <Tab text="Request">
+                     <content>
+                        <JFXListView />
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </VBox>
+   </left>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <Pane prefHeight="99.0" prefWidth="527.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="22.0" prefWidth="158.0" text="User Name" textFill="#e4e5ea">
+                     <font>
+                        <Font name="Agency FB Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox labelFloat="true" layoutX="14.0" layoutY="43.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="129.0" style="-fx-background-radius: 50;" unFocusColor="#e4e5ea" />
+                  <Line endX="250.0" layoutX="264.0" layoutY="85.0" startX="-250.0" stroke="#2196f3" strokeWidth="2.0" />
+               </children>
+            </Pane>
+         </top>
+         <bottom>
+            <Pane prefHeight="47.0" prefWidth="527.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField layoutX="14.0" layoutY="4.0" prefHeight="40.0" prefWidth="454.0" promptText="Type you message ......." style="-fx-background-radius: 50;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="473.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/send.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </bottom>
+         <center>
+            <Pane prefHeight="542.0" prefWidth="527.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
