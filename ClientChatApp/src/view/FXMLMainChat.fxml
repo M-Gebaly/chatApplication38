@@ -35,7 +35,7 @@
                                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                        </VBox.margin>
                                     </Circle>
-                                    <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="202.0" text="Label" textFill="#e4e5ea">
+                                    <Label fx:id="userNameLable" alignment="TOP_CENTER" prefHeight="30.0" prefWidth="202.0" textFill="#e4e5ea">
                                        <font>
                                           <Font name="Agency FB Bold" size="24.0" />
                                        </font>
@@ -48,7 +48,7 @@
                   </Tab>
                   <Tab text="Frinds">
                      <content>
-                        <JFXListView prefHeight="610.0" prefWidth="268.0" />
+                        <JFXListView fx:id="frindListView" prefHeight="610.0" prefWidth="268.0" />
                      </content>
                   </Tab>
                   <Tab text="Request">

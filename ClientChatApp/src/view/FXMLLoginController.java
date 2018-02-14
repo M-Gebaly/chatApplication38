@@ -76,7 +76,7 @@ public class FXMLLoginController implements Initializable {
                         Parent root = loader.load();
                         FXMLMainChatController controller = loader.getController();
                         //controller.setEmail(remail.getText());
-                        //controller.setUser(user);
+                        controller.setUser(user);
 
                         Scene scene = new Scene(root);
 

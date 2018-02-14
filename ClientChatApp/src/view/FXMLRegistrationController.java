@@ -43,6 +43,7 @@ public class FXMLRegistrationController implements Initializable {
     @FXML
     private AnchorPane signupPane;
     
+    @FXML
     private JFXTextField rname;
 
     @FXML
@@ -52,7 +53,7 @@ public class FXMLRegistrationController implements Initializable {
     private JFXTextField remail;
     
     @FXML
-    private JFXPasswordField opassword;
+    private JFXPasswordField apassword;
 
     @FXML
     private JFXRadioButton male;
@@ -101,7 +102,7 @@ public class FXMLRegistrationController implements Initializable {
     private void signupAction(ActionEvent event){
         String name = rname.getText();
         String Password = rpassword.getText();
-        String password_2 = opassword.getText();
+        String password_2 = apassword.getText();
         String email = remail.getText();
 
         boolean isMale = male.isSelected();
@@ -126,9 +127,9 @@ public class FXMLRegistrationController implements Initializable {
             remail.setPromptText("abc@abc.com");
 
         } else if (!password_2.equals(Password)) {
-            opassword.setStyle("-jfx-focus-color: #ee2e58;-fx-prompt-text-fill: #ee2e58;\n" +
+            apassword.setStyle("-jfx-focus-color: #ee2e58;-fx-prompt-text-fill: #ee2e58;\n" +
 "    -fx-text-fill: #fff;");
-            opassword.setPromptText("Password not matched");
+            apassword.setPromptText("Password not matched");
         } else {
             User user = new User();
             user.setName(name);
