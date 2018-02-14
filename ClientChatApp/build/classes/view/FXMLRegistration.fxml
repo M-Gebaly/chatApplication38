@@ -58,7 +58,7 @@
             <Image url="@../resources/gender.png" />
          </image>
       </ImageView>
-      <JFXPasswordField fx:id="apassword" labelFloat="true" layoutX="196.0" layoutY="396.0" onMousePressed="#passwordReleased" prefHeight="26.0" prefWidth="268.0" promptText="Confirm Password" style="-fx-prompt-text-fill: #a0a2ab; -fx-text-fill: #a0a2ab;" unFocusColor="#a0a2ab">
+      <JFXPasswordField fx:id="apassword" labelFloat="true" layoutX="196.0" layoutY="396.0" prefHeight="26.0" prefWidth="268.0" promptText="Confirm Password" style="-fx-prompt-text-fill: #a0a2ab; -fx-text-fill: #a0a2ab;" unFocusColor="#a0a2ab">
          <font>
             <Font size="14.0" />
          </font>
