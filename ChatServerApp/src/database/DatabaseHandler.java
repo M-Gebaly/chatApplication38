@@ -48,7 +48,8 @@ public class DatabaseHandler {
     }
     public void insert(String query){
         try {
-            statement.executeUpdate(query);
+            pres = connection.prepareStatement(query);
+            pres.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(DatabaseHandler.class.getName()).log(Level.SEVERE, null, ex);
         }

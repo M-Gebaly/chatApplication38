@@ -21,8 +21,8 @@ public class FriendTableOperation {
         ArrayList<User> usersList = new ArrayList<>();
         String sql = "SELECT * from "+
                 DatabaseTables.UserTable.tableName
-                +" where"+DatabaseTables.UserTable.idColumn
-                +" in (select"+DatabaseTables.FriendsTable.friendIDColumn+"from"+DatabaseTables.FriendsTable.tableName
+                +" where "+DatabaseTables.UserTable.idColumn
+                +" in (select "+DatabaseTables.FriendsTable.friendIDColumn+" from "+DatabaseTables.FriendsTable.tableName
                 +" where addfriend.USERID = "+id+" and addfriend.REQUESTFLAG != 0)";
         ResultSet resultSet= DatabaseHandler.getInstance().select(sql);
         try {

@@ -27,8 +27,8 @@ public class UserTableOperations {
             }
             else{
                 String sql = "INSERT INTO users(NAME,EMAIL,PASSWORD,GENDER,STATUS,STATUSFLAG) "
-                        + "VALUES ("+user.getName()+","+user.getEmail()+","+user.getPassword()+","+user.getGender()
-                        +","+user.getStatus()+","+user.getStatusFlag()+")";
+                        + "VALUES ('"+user.getName()+"','"+user.getEmail()+"','"+user.getPassword()+"','"+user.getGender()
+                        +"','"+user.getStatus()+"','"+user.getStatusFlag()+"')";
                 DatabaseHandler.getInstance().insert(sql);
                 
             }

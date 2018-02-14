@@ -9,6 +9,7 @@ import database.FriendTableOperation;
 import database.UserTableOperations;
 import interfaces.UserInfoInterface;
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import model.User;
 
@@ -16,7 +17,7 @@ import model.User;
  *
  * @author Asmaa
  */
-public class UserInfoImpl extends RemoteException implements UserInfoInterface{
+public class UserInfoImpl extends UnicastRemoteObject implements UserInfoInterface{
 
     public UserInfoImpl() throws RemoteException{
     }
