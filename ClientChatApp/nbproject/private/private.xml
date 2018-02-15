@@ -2,6 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group name="JavaProjects"/>
+        <group name="JavaProjects">
+            <file>file:/C:/Users/M.Gebaly/Documents/NetBeansProjects/chatApplication38/ClientChatApp/src/view/FXMLLoginController.java</file>
+            <file>file:/C:/Users/M.Gebaly/Documents/NetBeansProjects/chatApplication38/ClientChatApp/src/controller/RmiFactory.java</file>
+            <file>file:/C:/Users/M.Gebaly/Documents/NetBeansProjects/chatApplication38/ClientChatApp/src/view/FXMLChatContentController.java</file>
+            <file>file:/C:/Users/M.Gebaly/Documents/NetBeansProjects/chatApplication38/ClientChatApp/src/view/FXMLMainChatController.java</file>
+        </group>
     </open-files>
 </project-private>
