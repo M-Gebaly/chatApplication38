@@ -62,7 +62,8 @@ public class UserTableOperations {
                         resultSet.getString(DatabaseTables.UserTable.statusColumn),
                         resultSet.getString(DatabaseTables.UserTable.statusFlagColumn)
                 );
-        }
+            }
+            resultSet.close();
         } catch (SQLException ex) {
             Logger.getLogger(UserTableOperations.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -86,6 +87,7 @@ public class UserTableOperations {
                         genders[1]++;
                     }               
                 }
+                resultSet.close();
             } catch (SQLException ex) {
                 Logger.getLogger(UserTableOperations.class.getName()).log(Level.SEVERE, null, ex);
             }
