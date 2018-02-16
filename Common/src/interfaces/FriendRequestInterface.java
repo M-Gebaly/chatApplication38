@@ -6,6 +6,8 @@
 package interfaces;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
+import model.User;
 
 /**
  *
@@ -13,5 +15,8 @@ import java.rmi.RemoteException;
  */
 public interface FriendRequestInterface {
     public boolean sendRequest(long id,String friendEmail) throws RemoteException;
+    public ArrayList<User> getRequestsList(long id) throws RemoteException;
+    public void acceptRequest(long userID,long friendID)throws RemoteException;
+    public void rejectRequest(long userID,long friendID)throws RemoteException;
     
 }
