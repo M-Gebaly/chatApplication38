@@ -15,4 +15,5 @@ import java.rmi.RemoteException;
 public interface FactoryInterface extends Remote{
       public AccountAccessOperationsInterface getAAOInstance() throws RemoteException;
       public UserInfoInterface getUserInfoInstance() throws RemoteException;
+      public FriendRequestInterface getFriendRequestInstance() throws RemoteException;
 }

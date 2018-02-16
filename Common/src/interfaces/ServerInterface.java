@@ -21,4 +21,5 @@ public interface ServerInterface extends Remote{
     
     public AccountAccessOperationsInterface getAccessOperationsInstance()throws RemoteException;
     public UserInfoInterface getUserInfoInterface()throws RemoteException;
+    public FriendRequestInterface getFriendRequestInstance() throws RemoteException;
 }
