@@ -7,6 +7,7 @@ package controller;
 
 import interfaces.AccountAccessOperationsInterface;
 import interfaces.ClientInterface;
+import interfaces.FriendRequestInterface;
 import interfaces.UserInfoInterface;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -44,7 +45,10 @@ public class ServerImpl extends UnicastRemoteObject implements interfaces.Server
         System.out.println("from unregister");
         clients.remove(client);
     }
-
+    @Override
+    public FriendRequestInterface getFriendRequestInstance() throws RemoteException {
+        return new FactoryImpl().getFriendRequestInstance();
+    }
   
     
 }

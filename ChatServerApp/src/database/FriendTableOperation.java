@@ -43,6 +43,36 @@ public class FriendTableOperation {
         }
         return usersList;
     }
-
-
+ 
+    public boolean addFriendHandler(long id,String friendEmail){
+        boolean result=false;
+        try {
+            String checkUserQuery="SELECT id from users where lower(email) = lower('"+friendEmail+"')";
+            ResultSet resultSet=DatabaseHandler.getInstance().select(checkUserQuery);
+            if(resultSet.next()){
+                long friendID=resultSet.getLong(DatabaseTables.UserTable.idColumn);
+                String checkFriendQuery = "select "+DatabaseTables.FriendsTable.friendIDColumn
+                         +" from "+DatabaseTables.FriendsTable.tableName
+                         +" where (addfriend.USERID = "+id+" and addfriend.REQUESTFLAG != 0)";
+                resultSet=DatabaseHandler.getInstance().select(checkFriendQuery);
+                if(resultSet.next()){
+                    result=false;
+                }
+                else{
+                    String query="INSERT INTO "+DatabaseTables.FriendsTable.tableName+" values ("+id+","+friendID+","+"0)";
+                    DatabaseHandler.getInstance().insert(query);
+                    result=true;
+                }
+     
+            }
+            
+            
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(FriendTableOperation.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return result;
+        
+    }
+    
 }

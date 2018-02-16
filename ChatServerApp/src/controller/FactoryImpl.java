@@ -7,6 +7,7 @@ package controller;
 
 import interfaces.AccountAccessOperationsInterface;
 import interfaces.FactoryInterface;
+import interfaces.FriendRequestInterface;
 import interfaces.UserInfoInterface;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -32,6 +33,10 @@ public class FactoryImpl extends UnicastRemoteObject implements FactoryInterface
         UserInfoInterface userInfoInterface=new UserInfoImpl();
         return userInfoInterface;
     }
-    
+    @Override
+    public FriendRequestInterface getFriendRequestInstance() throws RemoteException {
+        FriendRequestInterface friendRequestInterface=new FriendRequestImpl();
+        return friendRequestInterface;
+    }
     
 }
