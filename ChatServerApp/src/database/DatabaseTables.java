@@ -17,7 +17,7 @@ public class DatabaseTables {
         public static String emailColumn="email";
         public static String passwordColumn="password";
         public static String genderColumn="gender";
-        public static String statusColumn="name";
+        public static String statusColumn="status";
         public static String statusFlagColumn="statusFlag";
        
     }
